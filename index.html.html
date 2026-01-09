@@ -1,0 +1,221 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Traditional Menemen Recipe</title>
+
+    <style>
+        :root {
+            --primary: #d9480f;
+            --secondary: #f76707;
+            --background: #fff5f0;
+            --text: #2b2b2b;
+            --card: #ffffff;
+        }
+
+        body.cooking-mode {
+            --background: #1f1f1f;
+            --text: #f1f1f1;
+            --card: #2a2a2a;
+            --primary: #ff922b;
+            --secondary: #ffa94d;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: "Segoe UI", Tahoma, sans-serif;
+        }
+
+        body {
+            background: linear-gradient(180deg, var(--background), #ffe8cc);
+            color: var(--text);
+            line-height: 1.7;
+            transition: all 0.3s ease;
+        }
+
+        body.cooking-mode {
+            background: var(--background);
+            font-size: 1.05rem;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: auto;
+            padding: 1.5rem 1rem 3rem;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 1.5rem;
+        }
+
+        header h1 {
+            color: var(--primary);
+            font-size: clamp(1.9rem, 5vw, 2.4rem);
+            margin-bottom: 0.5rem;
+        }
+
+        header p {
+            max-width: 600px;
+            margin: auto;
+            opacity: 0.9;
+            font-size: 1rem;
+        }
+
+        .controls {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.8rem;
+            justify-content: center;
+            margin: 1.5rem 0;
+        }
+
+        .controls button {
+            background: var(--primary);
+            color: white;
+            border: none;
+            padding: 0.75rem 1.6rem;
+            border-radius: 30px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background 0.3s ease, transform 0.2s ease;
+        }
+
+        .controls button:hover {
+            background: var(--secondary);
+            transform: translateY(-2px);
+        }
+
+        .image-wrapper {
+            margin: 1.8rem 0;
+            border-radius: 14px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+        }
+
+        .image-wrapper img {
+            width: 100%;
+            display: block;
+        }
+
+        section {
+            background: var(--card);
+            border-radius: 14px;
+            padding: 1.6rem;
+            margin-bottom: 1.2rem;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+        }
+
+        section h2 {
+            color: var(--secondary);
+            margin-bottom: 1rem;
+            font-size: 1.4rem;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        ul li {
+            margin-bottom: 0.5rem;
+        }
+
+        ul li::before {
+            content: "🍅";
+            margin-right: 0.6rem;
+        }
+
+        ol {
+            padding-left: 1.2rem;
+        }
+
+        ol li {
+            margin-bottom: 0.8rem;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 2rem;
+            font-size: 0.85rem;
+            opacity: 0.7;
+        }
+
+        @media (max-width: 480px) {
+            section {
+                padding: 1.3rem;
+            }
+
+            .controls button {
+                width: 100%;
+                max-width: 260px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <header>
+        <h1>Traditional Menemen Recipe</h1>
+        <p>
+            A classic Turkish breakfast made with eggs, tomatoes,
+            peppers, and olive oil — simple, warm, and comforting.
+        </p>
+    </header>
+
+    <div class="controls">
+        <button onclick="toggleCookingMode()">🍳 Cooking Mode</button>
+        <button onclick="bonAppetit()">🍽️ Bon Appetit</button>
+    </div>
+
+    <div class="image-wrapper">
+        <img src="menemen.webp" alt="Traditional Menemen in a pan">
+    </div>
+
+    <section>
+        <h2>Ingredients</h2>
+        <ul>
+            <li>3 tablespoons olive oil</li>
+            <li>2 green peppers, finely chopped</li>
+            <li>3 ripe tomatoes, grated or chopped</li>
+            <li>3 eggs</li>
+            <li>Salt to taste</li>
+            <li>Optional spices (red pepper flakes, black pepper)</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Cooking Guide</h2>
+        <ol>
+            <li>Heat olive oil in a pan over medium heat.</li>
+            <li>Sauté green peppers until softened.</li>
+            <li>Add tomatoes and cook until thickened.</li>
+            <li>Season with salt and spices.</li>
+            <li>Crack eggs into the pan.</li>
+            <li>Cook gently until eggs are just set.</li>
+            <li>Serve hot with fresh bread.</li>
+        </ol>
+    </section>
+
+    <footer>
+        © 2026 • Traditional Turkish Cuisine
+    </footer>
+
+</div>
+
+<script>
+    function toggleCookingMode() {
+        document.body.classList.toggle("cooking-mode");
+    }
+
+    function bonAppetit() {
+        alert("Bon Appetit! 🍳 Enjoy your delicious Menemen!");
+    }
+</script>
+
+</body>
+</html>
